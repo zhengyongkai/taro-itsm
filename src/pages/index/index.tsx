@@ -3,6 +3,7 @@ import { useLoad } from '@tarojs/taro';
 import { request } from '@/utils/request/request';
 
 import './index.scss';
+import CustomTabbar from '../components/Layout';
 
 export default function Index() {
   useLoad(async () => {
@@ -34,6 +35,7 @@ export default function Index() {
           <View className="demo-text-3">3</View>
         </SwiperItem>
       </Swiper>
+      <CustomTabbar active={0}></CustomTabbar>
     </View>
   );
 }
