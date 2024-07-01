@@ -1,4 +1,8 @@
 // $--primary-color: 'red';
 page {
   background-color: #f6f9ff; //设置背景颜色为灰色
+
+  > view {
+    margin-top: 30px;
+  }
 }

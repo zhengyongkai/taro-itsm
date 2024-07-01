@@ -17,6 +17,8 @@ export default {
         "primary-s": "#2869FF",
         textMain: "#17181A",
         textActive: "#585C69",
+        gray: "#D9D9D9",
+        bgGray: "#f6f9ff",
         red: "",
         pink: ""
       }
