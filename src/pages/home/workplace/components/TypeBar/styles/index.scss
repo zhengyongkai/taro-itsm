@@ -1,0 +1,25 @@
+.workplace-typebar {
+  :first-child {
+    white-space: nowrap;
+    > view {
+      display: inline-block;
+
+      &.active {
+        font-weight: 700;
+        color: var(--theme-color-primary);
+        border-bottom: 4px solid var(--theme-color-primary);
+      }
+    }
+  }
+}
+.workplace-type-filter {
+  // background-color: red;
+  // position: fixed;
+
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  // height: 200px;
+}
