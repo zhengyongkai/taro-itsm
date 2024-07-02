@@ -1,0 +1,6 @@
+.workplace-toolbar {
+  color: var(--theme-color-textActive);
+}
+.workplace-toolbar > .active {
+  color: var(--theme-color-textMain);
+}/*# sourceMappingURL=index.css.map */

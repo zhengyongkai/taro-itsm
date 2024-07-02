@@ -1,3 +1,5 @@
+import path from "path";
+
 import { defineConfig, type UserConfigExport } from "@tarojs/cli";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 import devConfig from "./dev";
@@ -22,6 +24,9 @@ export default defineConfig(async (merge, { command, mode }) => {
     copy: {
       patterns: [],
       options: {}
+    },
+    sass: {
+      resource: [path.resolve(__dirname, "..", "src/assets/css/theme.scss")]
     },
     framework: "react",
     compiler: "webpack5",

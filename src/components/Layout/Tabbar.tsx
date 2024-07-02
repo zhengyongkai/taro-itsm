@@ -81,7 +81,7 @@ function CustomTabbar(props: CustomTabbarPropsInf) {
   };
 
   return (
-    <Tabbar active={active} onChange={onChange} activeColor="#4752E3">
+    <Tabbar active={active} onChange={onChange}>
       {tabData.list.map((Item) => {
         return (
           <>

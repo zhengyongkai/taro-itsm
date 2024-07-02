@@ -1,8 +1,31 @@
-// $--primary-color: 'red';
-page {
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+#app {
+  margin-top: 30px;
+}
+
+page,
+#app {
   background-color: #f6f9ff; //设置背景颜色为灰色
 
   > view {
     margin-top: 30px;
+  }
+
+  .van-divider {
+    margin: 0;
+  }
+
+  .weui-tabbar {
+    display: none;
+  }
+
+  .van-tabbar-item--active {
+    color: var(--theme-color-primary);
   }
 }

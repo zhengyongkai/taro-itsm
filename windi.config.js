@@ -1,3 +1,5 @@
+import themeColor from "./theme/common";
+
 export default {
   prefixer: false,
   extract: {
@@ -10,18 +12,7 @@ export default {
   },
   theme: {
     extend: {
-      colors: {
-        white: "#ffffff",
-        primary: "#4D59E8",
-        primaryDark: "#3743C9",
-        "primary-s": "#2869FF",
-        textMain: "#17181A",
-        textActive: "#585C69",
-        gray: "#D9D9D9",
-        bgGray: "#f6f9ff",
-        red: "",
-        pink: ""
-      }
+      ...themeColor
     }
   },
   enableRpx: true
