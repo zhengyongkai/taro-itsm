@@ -28,10 +28,8 @@
     display: flex;
     flex-wrap: wrap;
 
-    view {
+    > view {
       margin-bottom: 16px;
-    }
-    view {
       margin-right: 16px;
     }
   }
