@@ -12,14 +12,27 @@
     }
   }
 }
-.workplace-type-filter {
-  // background-color: red;
-  // position: fixed;
-
+.workplace-type-cover {
+  background-color: rgba(32, 32, 32, 0.7);
+  position: fixed;
   left: 0;
   right: 0;
-  top: 0;
-  bottom: 0;
+  // top: 0;
+  // bottom: 0;
   z-index: 1;
-  // height: 200px;
+  height: 100vh;
+
+  .workplace-type-cover-content {
+    background-color: #fff;
+    padding: 18px;
+    display: flex;
+    flex-wrap: wrap;
+
+    view {
+      margin-bottom: 16px;
+    }
+    view {
+      margin-right: 16px;
+    }
+  }
 }

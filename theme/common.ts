@@ -6,6 +6,7 @@ const common = {
     "primary-s": "var(--theme-color-primaryS)",
     textMain: "var(--theme-color-textMain)",
     textActive: "var(--theme-color-textActive)",
+    "tag-bg": "var(--theme-color-TagBg)",
     red: "",
     pink: ""
   }

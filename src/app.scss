@@ -29,3 +29,8 @@ page,
     color: var(--theme-color-primary);
   }
 }
+
+.stopScroll {
+  height: 100vh;
+  overflow: hidden;
+}

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { DropdownItem, DropdownMenu, Sticky, Divider } from "@antmjs/vantui";
 import { ScrollView, View } from "@tarojs/components";
-import { useLoad } from "@tarojs/taro";
+import Taro, { useLoad } from "@tarojs/taro";
 import Tabbar from "@/components/Layout/Tabbar";
 
 import UserCard from "./components/UserCard/UserCard";
@@ -14,12 +14,12 @@ import "./index.scss";
 import TypeBar from "./components/TypeBar/TypeBar";
 import Drvider from "@/components/Common/Drvider/Drvider";
 import DataPanel from "./components/DataPanel/DataPanel";
-import Taro from "@tarojs/taro";
 
 export default function HomeApply() {
   // const dispatch = useDispatch();
   const scrollRef = useRef(null);
   const [isToolBarFix, setToolBarFix] = useState<boolean>(false);
+  const [isCatchMove, setCatchMove] = useState<boolean>(false);
 
   useLoad(() => {
     // console.log("Page loaded.");
@@ -30,14 +30,16 @@ export default function HomeApply() {
     setToolBarFix(e.detail.isFixed);
   }
 
-  function scrollToFilter() {
+  function scrollToFilter(isMove) {
+    setCatchMove(!isMove);
     Taro.pageScrollTo({
       selector: ".workplace-toolbar-content"
     });
   }
 
   return (
-    <View className="home/apply">
+    <View className="page" catch-move={isCatchMove}>
+      {isCatchMove}
       <View className="px-32px mb-15px">
         <UserCard></UserCard>
       </View>
@@ -49,13 +51,16 @@ export default function HomeApply() {
         onScroll={onscroll}
         offsetTop={0}
         className={` workplace-toolbar-content   ${isToolBarFix ? "bg-white" : "bg-bgGray"}`}>
-        <View className="px-32px ">
-          <ToolBar></ToolBar>
+        <View>
+          <View className="px-32px ">
+            <ToolBar></ToolBar>
+          </View>
+
           <View className="mt-24px mb-28px">
             <Drvider></Drvider>
           </View>
           <View>
-            <TypeBar onChange={() => scrollToFilter()}></TypeBar>
+            <TypeBar onChange={(_e, isMove: string) => scrollToFilter(isMove)}></TypeBar>
           </View>
         </View>
       </Sticky>
