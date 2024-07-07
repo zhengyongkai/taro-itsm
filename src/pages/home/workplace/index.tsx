@@ -27,7 +27,11 @@ export default function HomeApply() {
   useLoad(() => {});
 
   function onscroll(e) {
-    setToolBarFix(e.detail.isFixed);
+    if (e.detail.scrollTop >= 236) {
+      setToolBarFix(true);
+    } else {
+      setToolBarFix(false);
+    }
   }
 
   function scrollToFilter(isMove) {
