@@ -12,7 +12,7 @@ function Tag(props: TagInf) {
   const { children, active = false } = props;
   return (
     <View
-      className={`h-64px text-center rounded  text-primary-s bg-tag-bg min-w-160px leading-64px text-14 font-400 inline-block px-24px py-12px ${active ? "tag-active" : ""}`}>
+      className={`h-64px text-center rounded  text-primary-s bg-tag-bg min-w-160px  text-14 font-400 inline-block px-24px py-12px ${active ? "tag-active" : ""}`}>
       {children}
     </View>
   );

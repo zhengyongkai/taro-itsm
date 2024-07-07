@@ -15,28 +15,29 @@ import TypeBar from "./components/TypeBar/TypeBar";
 import Drvider from "@/components/Common/Drvider/Drvider";
 import DataPanel from "./components/DataPanel/DataPanel";
 import Search from "@/components/Common/Search/Search";
+import { scrollTo } from "@/utils/common/scroll";
 
 export default function HomeApply() {
   // const dispatch = useDispatch();
   const scrollRef = useRef(null);
   const [isToolBarFix, setToolBarFix] = useState<boolean>(false);
   const [isCatchMove, setCatchMove] = useState<boolean>(false);
+  const [tag, setTag] = useState([1, 23, 4, 5, 6, 7, 8, , 9, 10]);
 
-  useLoad(() => {
-    // console.log("Page loaded.");
-  });
+  useLoad(() => {});
 
   function onscroll(e) {
-    // console.log(e.detail);
     setToolBarFix(e.detail.isFixed);
   }
 
   function scrollToFilter(isMove) {
     setCatchMove(!isMove);
-    Taro.pageScrollTo({
-      selector: ".workplace-toolbar-content"
-    });
+    if (!isToolBarFix) {
+      scrollTo(".workplace-toolbar-content");
+    }
   }
+
+  function TagList() {}
 
   return (
     <>
@@ -59,17 +60,26 @@ export default function HomeApply() {
             <View className="px-32px ">
               <ToolBar></ToolBar>
             </View>
-
             <View className="mt-24px mb-28px">
               <Drvider></Drvider>
             </View>
             <View>
-              <TypeBar onChange={(_e, isMove: string) => scrollToFilter(isMove)}></TypeBar>
+              <TypeBar
+                onChange={(_e, isMove: string) => {
+                  console.log(_e);
+                  if (_e === "scroll") {
+                    console.log(_e);
+                    scrollToFilter(isMove);
+                  } else {
+                    TagList();
+                  }
+                }}></TypeBar>
             </View>
           </View>
         </Sticky>
 
-        <View className="h-5000px">
+        <View
+          style={{ height: isCatchMove ? 600 : 800, overflow: isToolBarFix ? "scroll" : "hidden" }}>
           <DataPanel></DataPanel>
         </View>
         <Tabbar active={0}></Tabbar>

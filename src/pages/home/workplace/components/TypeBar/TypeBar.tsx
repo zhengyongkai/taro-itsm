@@ -77,7 +77,7 @@ function TypeBar(props: TypeBarPropsInf) {
         <View className="workplace-type-cover">
           <View className="workplace-type-cover-content">
             <Tag>
-              <View>文字文字</View>
+              <View onClick={() => onChange("tag", 1)}>文字文字</View>
             </Tag>
             <Tag>
               <View>文字文字</View>
