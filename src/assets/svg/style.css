@@ -1,11 +1,11 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot?5jiw1g");
+  src: url("fonts/icomoon.eot?5zyaja");
   src:
-    url("fonts/icomoon.eot?5jiw1g#iefix") format("embedded-opentype"),
-    url("fonts/icomoon.ttf?5jiw1g") format("truetype"),
-    url("fonts/icomoon.woff?5jiw1g") format("woff"),
-    url("fonts/icomoon.svg?5jiw1g#icomoon") format("svg");
+    url("fonts/icomoon.eot?5zyaja#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?5zyaja") format("truetype"),
+    url("fonts/icomoon.woff?5zyaja") format("woff"),
+    url("fonts/icomoon.svg?5zyaja#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,27 +27,28 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-apply:before {
+.icon-Bell:before {
   content: "\e900";
-}
-.icon-formitem:before {
-  content: "\e901";
-}
-.icon-message:before {
-  content: "\e902";
-}
-.icon-workplace:before {
-  content: "\e903";
-}
-.icon-notice:before {
-  content: "\e904";
   color: rgb(67, 124, 255);
 }
-.icon-fire .path1:before {
-  content: "\e905";
+.icon-Clock:before {
+  content: "\e901";
 }
-.icon-fire .path2:before {
-  content: "\e906";
+.icon-Grid:before {
+  content: "\e902";
+}
+.icon-Popular .path1:before {
+  content: "\e903";
+  color: rgb(67, 124, 255);
+}
+.icon-Popular .path2:before {
+  content: "\e904";
   margin-left: -1em;
   color: rgb(253, 253, 253);
+}
+.icon-ReportFill:before {
+  content: "\e905";
+}
+.icon-Symbol:before {
+  content: "\e906";
 }

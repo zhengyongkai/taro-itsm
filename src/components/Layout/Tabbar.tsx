@@ -24,26 +24,26 @@ function CustomTabbar(props: CustomTabbarPropsInf) {
     list: [
       {
         id: 0,
-        icon: "workplace",
+        icon: "Grid",
         text: "工作台",
         url: "pages/home/workplace/index"
       },
       {
         id: 1,
-        icon: "formitem",
+        icon: "ReportFill",
         text: "全部表单",
         url: "pages/home/formitem/index"
       },
       {
         id: 2,
-        icon: "apply",
+        icon: "Clock",
         text: "申请记录",
         url: "pages/home/apply/index",
         dot: true
       },
       {
         id: 3,
-        icon: "message",
+        icon: "Symbol",
         text: "消息",
         url: "pages/home/message/index",
         info: 99

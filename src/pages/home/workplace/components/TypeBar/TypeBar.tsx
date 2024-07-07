@@ -55,7 +55,7 @@ function TypeBar(props: TypeBarPropsInf) {
       <View className="px-32px flex h-72px leading-72px items-center workplace-typebar">
         <View className=" overflow-scroll  ">
           <View className="flex items-center px-4px mr-48px text-textActive text-center active">
-            <Icon classPrefix="icon" name="notice" className="mr-8px" />
+            <Icon classPrefix="icon" name="Popular" className="mr-8px" />
             <View>最热门</View>
           </View>
           {typeList.map((item) => {
