@@ -14,6 +14,7 @@ import "./index.scss";
 import TypeBar from "./components/TypeBar/TypeBar";
 import Drvider from "@/components/Common/Drvider/Drvider";
 import DataPanel from "./components/DataPanel/DataPanel";
+import Search from "@/components/Common/Search/Search";
 
 export default function HomeApply() {
   // const dispatch = useDispatch();
@@ -38,37 +39,41 @@ export default function HomeApply() {
   }
 
   return (
-    <View className="page" catch-move={isCatchMove}>
-      {isCatchMove}
-      <View className="px-32px mb-15px">
-        <UserCard></UserCard>
+    <>
+      <View>
+        <Search></Search>
       </View>
-      <View className="px-32px mb-36px">
-        <Notice></Notice>
-      </View>
-
-      <Sticky
-        onScroll={onscroll}
-        offsetTop={0}
-        className={` workplace-toolbar-content   ${isToolBarFix ? "bg-white" : "bg-bgGray"}`}>
-        <View>
-          <View className="px-32px ">
-            <ToolBar></ToolBar>
-          </View>
-
-          <View className="mt-24px mb-28px">
-            <Drvider></Drvider>
-          </View>
-          <View>
-            <TypeBar onChange={(_e, isMove: string) => scrollToFilter(isMove)}></TypeBar>
-          </View>
+      <View className="page" catch-move={isCatchMove}>
+        <View className="px-32px mb-15px pt-142px">
+          <UserCard></UserCard>
         </View>
-      </Sticky>
+        <View className="px-32px mb-36px">
+          <Notice></Notice>
+        </View>
 
-      <View className="h-5000px">
-        <DataPanel></DataPanel>
+        <Sticky
+          onScroll={onscroll}
+          offsetTop={56}
+          className={` workplace-toolbar-content   ${isToolBarFix ? "bg-white" : "bg-bgGray"}`}>
+          <View>
+            <View className="px-32px ">
+              <ToolBar></ToolBar>
+            </View>
+
+            <View className="mt-24px mb-28px">
+              <Drvider></Drvider>
+            </View>
+            <View>
+              <TypeBar onChange={(_e, isMove: string) => scrollToFilter(isMove)}></TypeBar>
+            </View>
+          </View>
+        </Sticky>
+
+        <View className="h-5000px">
+          <DataPanel></DataPanel>
+        </View>
+        <Tabbar active={0}></Tabbar>
       </View>
-      <Tabbar active={0}></Tabbar>
-    </View>
+    </>
   );
 }

@@ -5,8 +5,12 @@
   color: transparent;
 }
 
+view {
+  box-sizing: border-box;
+}
+
 #app {
-  margin-top: 30px;
+  // margin-top: 30p;
 }
 
 page,
@@ -14,7 +18,7 @@ page,
   background-color: var(--theme-color-Bg) !important; //设置背景颜色为灰色
 
   > view {
-    margin-top: 30px;
+    // margin-top: 30px;
   }
 
   .van-divider {
